@@ -17,8 +17,8 @@ const CustomNavLink: React.FC<CustomNavLinkProps> = ({
   return (
     <Link
       href={href}
-      className={`text-[1.7rem] font-medium py-2 mx-6 font-sans tracking-wide text-custom-black hover:text-custom-black-1 border-b-4  ${
-        isActive ? "border-b-4 border-custom-red-light-2" : "border-transparent"
+      className={`text-[1.7rem] font-medium py-2 mx-6 font-sans tracking-wide  hover:text-custom-red-light-2   ${
+        isActive ? "  text-custom-white" : " text-custom-black-1"
       }`}
     >
       {children}

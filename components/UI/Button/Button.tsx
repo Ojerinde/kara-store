@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import React from "react"
-import Image from "next/image"
-import classes from "./Button.module.css"
+import React from "react";
+import Image from "next/image";
+import classes from "./Button.module.css";
 
 interface ButtonProps {
-  size: "large" | "medium" | "small" | undefined
-  mode: "primary" | "secondary" | "textonly" | undefined
-  icon: "left" | "right" | "off"
-  width?: boolean
-  disabled?: boolean
-  type?: "button" | "submit" | "reset" | undefined
-  children: React.ReactNode
-  onClick: () => void
+  size: "large" | "medium" | "small" | undefined;
+  mode: "primary" | "secondary" | "textonly" | undefined;
+  icon: "left" | "right" | "off";
+  width?: boolean;
+  disabled?: boolean;
+  type?: "button" | "submit" | "reset" | undefined;
+  children: React.ReactNode;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
         >
           {children}
         </button>
-      )
+      );
     }
     if (icon === "left") {
       return (
@@ -65,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
           </span>{" "}
           <span>{children}</span>
         </button>
-      )
+      );
     }
     return (
       <button
@@ -89,7 +89,7 @@ const Button: React.FC<ButtonProps> = ({
           />
         </span>
       </button>
-    )
+    );
   }
   if (size === "medium") {
     if (icon === "off") {
@@ -104,7 +104,7 @@ const Button: React.FC<ButtonProps> = ({
         >
           {children}
         </button>
-      )
+      );
     }
     if (icon === "left") {
       return (
@@ -129,7 +129,7 @@ const Button: React.FC<ButtonProps> = ({
           </span>{" "}
           <span>{children}</span>
         </button>
-      )
+      );
     }
     return (
       <button
@@ -153,7 +153,7 @@ const Button: React.FC<ButtonProps> = ({
           />
         </span>
       </button>
-    )
+    );
   }
   if (icon === "off") {
     return (
@@ -169,7 +169,7 @@ const Button: React.FC<ButtonProps> = ({
       >
         {children}
       </button>
-    )
+    );
   }
   if (icon === "left") {
     return (
@@ -194,7 +194,7 @@ const Button: React.FC<ButtonProps> = ({
         </span>{" "}
         <span>{children}</span>
       </button>
-    )
+    );
   }
   return (
     <button
@@ -218,7 +218,7 @@ const Button: React.FC<ButtonProps> = ({
         />
       </span>
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

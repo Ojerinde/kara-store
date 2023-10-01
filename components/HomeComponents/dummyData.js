@@ -409,7 +409,19 @@ export const productsDumyData = {
 export const imagesDummyData = [
   "https://images.macrumors.com/t/IrHL2Hp3vvAeCA8g3SIA_YOckuY=/800x0/article-new/2023/08/iPhone-15-Pro-Colors-Mock-Feature.jpg?lossy",
   "https://zit.ng/cdn/shop/products/20200708035610925_2048x2048.png?v=1633118045",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhw8iu0UrXFLfSiyRIXmcy-GPJRx-n-A36Dw&usqp=CAU",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhRE7QzBmuaxPSgx2EY8uM5e7vga3gn8QTw&usqp=CAU",
   "https://images.prismic.io/leetdesk/e2dcd2fe-b43a-41dd-b70d-de4a07371b99_gaming-zimmer-led-rgb-life.jpg?auto=compress,format",
+];
+
+export const gadgetStoreItems = [
+  { label: "All Categories", value: "All Categories" },
+  { label: "Smartphone", value: "Smartphone" },
+  { label: "Laptop", value: "Laptop" },
+  { label: "Tablet", value: "Tablet" },
+  { label: "Headphones", value: "Headphones" },
+  { label: "Camera", value: "Camera" },
+  { label: "Smartwatch", value: "Smartwatch" },
+  { label: "Gaming Console", value: "Gaming Console" },
+  { label: "Accessories", value: "Accessories" },
+  { label: "Drones", value: "Drones" },
+  { label: "Wearables", value: "Wearables" },
 ];

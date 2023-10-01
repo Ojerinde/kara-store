@@ -17,3 +17,31 @@ html {
 body {
   box-sizing: border-box;
 }
+
+.auth__form--header {
+  font-weight: 600;
+  font-size: 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    rgb(248, 67, 67) 0%,
+    rgb(231, 75, 98) 10%,
+    hsl(8, 100%, 70%) 24%,
+    hsl(343, 88%, 65%) 45%,
+    hsl(21, 88%, 65%) 75%,
+    hsl(9, 100%, 53%) 100%
+  );
+  color: transparent;
+  background-clip: text;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.auth__form--header::after {
+  content: " ";
+  display: block;
+  width: 6rem;
+  height: 3px;
+  background-color: red;
+  margin: 0.3rem auto 3rem;
+}

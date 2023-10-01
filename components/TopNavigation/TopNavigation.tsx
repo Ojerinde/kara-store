@@ -11,6 +11,15 @@ import CustomNavLink from "../CustomNavLink/CustomNavLink";
 const TopNavigation = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [screenSize, setScreenSize] = useState<string>("lg");
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,18 +38,18 @@ const TopNavigation = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "Contact", link: "/contact" },
-    { name: "About", link: "/about" },
-    { name: "Sign Up", link: "/signup" },
+    { name: "HOME", link: "/" },
+    { name: "ABOUT", link: "/about" },
+    { name: "BLOG", link: "/blog" },
+    { name: "PRIVACY", link: "/privacy" },
   ];
 
   const router = useRouter();
   const pathName = usePathname();
 
   return (
-    <nav className="flex justify-between items-center py-6 px-12 border-b border-custom-grey-light-2">
-      <Link href="/" className=" w-fit bg-custom-red px-6">
+    <nav className="flex justify-between items-center py-6 px-12 bg-custom-red-light-4 border-b border-custom-grey-light-2">
+      <Link href="/" className=" w-fit px-6">
         <figure className="relative h-[6rem] w-[10rem]">
           <Image
             className="absolute "
@@ -56,36 +65,52 @@ const TopNavigation = () => {
         </figure>
       </Link>
 
-      <ul className="hidden basis-[30%] lg:flex justify-end items-center ">
+      <ul className="hidden basis-[60%] lg:flex justify-center items-center ">
         {navItems.map((link, index) => (
-          <li
-            key={index}
-            className="text-[1.65rem] font-normal"
-            style={{
-              color: pathName === link.link ? "#DB7600" : "#",
-              transition: "0.5s ease",
-            }}
-          >
+          <li key={index} className="text-[1.65rem] font-normal">
             <CustomNavLink href={`${link.link}`} pathName={pathName} exact>
               {link.name}
             </CustomNavLink>
           </li>
         ))}
+        <div
+          className="relative z-20"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className="cursor-pointer bg-custom-white text-custom-red shadow-md text-[1.6rem] px-6 py-3 rounded-md">
+            ACCOUNT
+          </div>
+          {isDropdownVisible && (
+            <div className="absolute left-0 shadow-lg -bottom-[220%] w-[15rem] bg-custom-white  h-fit">
+              <ul className="w-full">
+                <li
+                  onClick={() => {
+                    router.push("/login");
+                    handleMouseLeave();
+                  }}
+                  className="py-4 mb-1 text-[1.4rem] text-center cursor-pointer hover:bg-custom-red-light-4 hover:text-custom-white"
+                >
+                  Login
+                </li>
+                <li
+                  onClick={() => {
+                    router.push("/signup");
+                    handleMouseLeave();
+                  }}
+                  className=" py-4 text-[1.4rem] text-center cursor-pointer hover:bg-custom-red-light-4 hover:text-custom-white"
+                >
+                  Sign Up
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </ul>
 
-      <div className="hidden basis-[27%] lg:flex justify-between items-center text-[1.65rem] ">
-        <form className="flex items-center border bg-custom-white-1 pr-4 text-custom-black-1 rounded-[0.7rem]">
-          <input
-            type="text"
-            className="rounded-[.4rem] py-[0.7rem] pl-[1rem] font-normal text-custom-black-1 bg-custom-white-1 pr-[1.2rem] [1.5rem] placeholder:font-normal placeholder:text-custom-black-2 placeholder:text-[1.3rem] focus:outline-none"
-            placeholder="What are you looking for?"
-          />
-          <RiSearchLine className="text-[2.2rem] cursor-pointer" />
-        </form>
-        <div className="flex ">
-          <MdOutlineFavoriteBorder className="text-[2.7rem] mr-2 cursor-pointer" />
-          <MdOutlineShoppingCart className="text-[2.7rem] cursor-pointer" />
-        </div>
+      <div className="hidden lg:flex lg:space-x-4 justify-between items-center  text-custom-white text-[1.65rem]">
+        <MdOutlineFavoriteBorder className="text-[2.7rem] cursor-pointer" />
+        <MdOutlineShoppingCart className="text-[2.7rem] cursor-pointer" />
       </div>
 
       {/* Mobile Nav */}

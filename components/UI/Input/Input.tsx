@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { InputHTMLAttributes } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -8,11 +7,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   helper?: string | null;
   status?: "success" | "error" | "warning" | null;
   width?: string;
-  icon?: string;
+  icon?: React.ReactNode;
   iconPosition?: "left" | "right";
   prefix?: string;
   suffix?: string;
-  onClick?: () => void;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -26,7 +24,6 @@ const Input: React.FC<InputProps> = ({
   iconPosition,
   prefix,
   suffix,
-  onClick,
   ...rest
 }) => {
   return (
@@ -38,18 +35,18 @@ const Input: React.FC<InputProps> = ({
     >
       <label
         htmlFor={name}
-        className="block text-[1.3333rem] font-semibold text-[#10002E] mb-[0.5rem]"
+        className="block text-[1.4rem] font-semibold text-[#10002E] mb-[0.4rem]"
       >
         {label}
       </label>
-      <div className="flex items-center relative gap-3">
-        {prefix && (
-          <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-[1.6rem]">
+      <div className="flex items-center relative gap-2">
+        {/* {prefix && (
+          <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-[1.2rem]">
             {prefix}
           </span>
-        )}
+        )} */}
         <input
-          className={`px-[1.5em] py-[1.5rem]  text-[1.6rem] border text-custom-black  border-[#D5D4DC] outline-0 rounded placeholder:text-custom-grey placeholder:text-[1.6rem] w-full  h-[4.3rem] ${
+          className={`px-[1.2rem] py-[.8rem] text-[1.4rem] border text-custom-black border-[#D5D4DC] outline-0 rounded placeholder:text-custom-grey placeholder:text-[1.4rem] w-full ${
             status === "success"
               ? "focus:border-[#2BAC47] !border-[#2BAC47] active:border-[#2BAC47] bg-[#F1F8F2] border-2 focus:border-2"
               : status === "error"
@@ -62,25 +59,18 @@ const Input: React.FC<InputProps> = ({
           name={name}
           {...rest}
         />
-        {suffix && (
+        {/* {suffix && (
           <span className="absolute inset-y-0 right-0 pr-3 flex items-center text-[1.6rem]">
             {suffix}
           </span>
-        )}
+        )} */}
         {icon && (
           <div
             className={`absolute ${
               iconPosition === "right" ? "right-4" : "left-4"
             }`}
           >
-            <Image
-              className="w-[2.5rem] h-[2.5rem] cursor-pointer"
-              width={50}
-              height={50}
-              src={icon || ""}
-              alt={label}
-              onClick={onClick}
-            />
+            {icon}
           </div>
         )}
       </div>
@@ -94,7 +84,7 @@ const Input: React.FC<InputProps> = ({
             : status === "warning"
             ? "text-[#EF8943]"
             : null
-        } mt-[0.5em] text-[#736A85] text-[1.3333rem] flex gap-1 items-start`}
+        } mt-[0.4rem] text-[#736A85] text-[1.2rem] flex gap-1 items-start`}
       >
         {status === "success" && helper ? (
           <svg
