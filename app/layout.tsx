@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <ScamAlert message="The scam alert placeholder"></ScamAlert> */}
+        <ScamAlert message="Kara.com.ng will never ask you to pay or send money to any other bank Name Besides Royal Coast Technologies Limited"></ScamAlert>
         <TopNavigation></TopNavigation>
         <main>{children}</main>
       </body>

@@ -1,13 +1,7 @@
 "use client";
 
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "./imagesSwiper.css";
+import Slider from "react-slick";
 
 import Image from "next/image";
 
@@ -16,39 +10,33 @@ type ImagesSwiperProps = {
 };
 
 const ImagesSwiper = ({ images }: ImagesSwiperProps) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
   return (
     <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination]}
-        className="mySwiper"
-      >
+      <Slider {...settings}>
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <figure className="w-[100%] h-[40rem] relative">
-              <Image
-                src={image}
-                alt="Product Images"
-                fill
-                style={{
-                  objectFit: "cover",
-                  position: "absolute",
-                }}
-                className=""
-              />
-            </figure>
-          </SwiperSlide>
+          <figure key={index} className="w-[100%] h-[37rem] relative">
+            <Image
+              src={image}
+              alt="Product Images"
+              fill
+              style={{
+                objectFit: "contain",
+                position: "absolute",
+              }}
+              className=""
+            />
+          </figure>
         ))}
-      </Swiper>
+      </Slider>
     </>
   );
 };

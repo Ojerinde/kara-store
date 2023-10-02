@@ -14,17 +14,17 @@ const ScamAlert: React.FC<ScamAlertProp> = ({ message }) => {
 
     bgTimeline
       .to(".scam-alert", {
-        duration: 0.9,
+        duration: 2,
         backgroundColor: "#1A1A1A",
       })
-      .to(".scam-alert", { duration: 0.9, backgroundColor: "#F9AAAA" })
-      .to(".scam-alert", { duration: 0.9, backgroundColor: "#1A1A1A" })
-      .to(".scam-alert", { duration: 0.9, backgroundColor: "#F9AAAA" });
+      .to(".scam-alert", { duration: 2, backgroundColor: "#F9AAAA" })
+      .to(".scam-alert", { duration: 2, backgroundColor: "#1A1A1A" })
+      .to(".scam-alert", { duration: 2, backgroundColor: "#F9AAAA" });
 
     const spinTimeline = gsap.timeline({ repeat: -1 });
 
     spinTimeline.to(".spin-element", {
-      duration: 2,
+      duration: 4,
       rotation: -360,
       ease: "linear",
     });
@@ -33,7 +33,9 @@ const ScamAlert: React.FC<ScamAlertProp> = ({ message }) => {
   return (
     <div className="scam-alert py-2 flex justify-center items-center text-custom-white">
       <PiSealWarningFill className="spin-element text-[3rem] " />
-      <p className="pl-4 font-bold text-[1.2rem]">{message}</p>
+      <p className="pl-4 font-bold tracking-wide text-[1.3rem] text-custom-white">
+        {message}
+      </p>
     </div>
   );
 };

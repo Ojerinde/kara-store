@@ -91,12 +91,14 @@ const HomeHeader = () => {
             </div>
           </div>
         </div>
-        <div className="mt-[4rem] shadow-lg mx-auto w-[60vw]">
-          <ImagesSwiper images={imagesDummyData}></ImagesSwiper>
+        <div className="mt-[4rem] shadow-lg mx-auto w-[65vw]">
+          <ImagesSwiper images={imagesDummyData} />
         </div>
         {hovered && (
-          <div className="w-[95%] mx-auto h-[76vh] absolute left-0 top-0 bg-red-300 z-50">
-            {categoryId}
+          <div className="w-[100%] p-4 mx-auto h-[76vh] absolute left-0 top-0 bg-red-300 z-50">
+            <h1 className="text-xl">
+              This will list out all the sub categories of {categoryId}
+            </h1>
           </div>
         )}
       </div>

@@ -79,7 +79,7 @@ const TopNavigation = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className="cursor-pointer bg-custom-white text-custom-red shadow-md text-[1.6rem] px-6 py-3 rounded-md">
-            ACCOUNT
+            PAGES
           </div>
           {isDropdownVisible && (
             <div className="absolute left-0 shadow-lg -bottom-[220%] w-[15rem] bg-custom-white  h-fit">

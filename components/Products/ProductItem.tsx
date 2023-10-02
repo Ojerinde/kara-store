@@ -21,35 +21,22 @@ const ProductItem = ({ productName, price, imageUrl }: ProductItemProps) => {
   };
 
   return (
-    <li
-      className="relative h-full w-full shadow-md rounded-[2rem] overflow-hidden cursor-pointer
-       transform transition-all duration-300 hover:scale-105 active:scale-98 active:translate-y-1"
-    >
-      <p className="z-0 h-[8rem] rounded-[2rem] px-8 pt-[2.8rem] bg-custom-yellow flex justify-between">
-        <p className="flex gap-x-2 h-fit items-center text-custom-black font-medium">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="7"
-            height="6"
-            viewBox="0 0 7 6"
-            fill="none"
-          >
-            <ellipse cx="3.23077" cy="3" rx="3.23077" ry="3" fill="#00C614" />
-          </svg>
-        </p>
-      </p>
-      <div onClick={navigateToMatch}>
-        <div className="-mt-[4rem] mx-auto z-10 bg-custom-white rounded-[50%] p-2 w-[10rem] h-[10rem]">
-          <figure className="relative rounded-[50%] p-2 w-[100%] h-[100%] overflow-hidden">
-            <Image
-              src={imageUrl}
-              fill
-              style={{ objectFit: "contain", position: "absolute" }}
-              alt="Profile Picture"
-            />
-          </figure>
-        </div>
-        <div className="px-4 mt-[3.5rem] text-center">{price}</div>
+    <li className="relative mb-8 mt-4 list-none h-full w-[85%] overflow-hidden cursor-pointer">
+      <div className="bg-custom-white-1 p-8 w-[100%] h-[18rem]">
+        <figure className="relative  w-[100%] h-[100%] overflow-hidden">
+          <Image
+            src={imageUrl}
+            fill
+            style={{ objectFit: "contain", position: "absolute" }}
+            alt="Profile Picture"
+          />
+        </figure>
+      </div>
+      <div className=" text-left  mt-[1rem]">
+        <h2 className="text-[1.6rem] font-normal">This is {productName}</h2>
+        <h3 className="text-[1.5rem] text-custom-red font-semibold">
+          #{price}
+        </h3>
       </div>
     </li>
   );

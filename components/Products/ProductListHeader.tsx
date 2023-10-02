@@ -1,19 +1,19 @@
 import React from "react";
 
 const ProductListHeader = ({
-  apartmentType,
+  productType,
   title,
 }: {
-  apartmentType: string;
+  productType: string;
   title: string;
 }) => {
   return (
-    <div className="text-right text-[1.6rem] font-[Roboto] font-normal no-underline text-custom-grey-light-1">
-      <h1 className="border-l-8 border-custom-red text-custom-red pl-4">
+    <div className=" font-[Roboto] font-normal no-underline text-custom-grey-light-1">
+      <h1 className="text-[1.8rem] border-l-[1.5rem] border-custom-red text-custom-red pl-4">
         {title}
       </h1>
-      <h3 className="ml-4 text-custom-orange font-semibold e ">
-        {apartmentType}
+      <h3 className="my-8 font-[Unica One] text-[2.4rem] text-custom-black font-semibold ">
+        {productType}
       </h3>
     </div>
   );
