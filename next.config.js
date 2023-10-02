@@ -7,6 +7,7 @@ const nextConfig = {
       "images.prismic.io",
       "zit.ng",
       "avatars.githubusercontent.com",
+      "i0.wp.com",
     ],
   },
 };

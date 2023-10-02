@@ -1,14 +1,15 @@
-import ScamAlert from "@/components/ScamAlert/ScamAlert";
 import "./globals.css";
 import type { Metadata } from "next";
 
 import { Inter } from "next/font/google";
+
+import ScamAlert from "@/components/ScamAlert/ScamAlert";
 import TopNavigation from "@/components/TopNavigation/TopNavigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kara Online store",
+  title: "Kara.com.ng store",
   description: "This is Kara online store",
 };
 
