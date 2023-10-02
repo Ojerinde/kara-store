@@ -29,7 +29,7 @@ const HomeHeader = () => {
     setHovered(false);
   };
   return (
-    <section className="flex justify-between px-[8rem] py-4">
+    <section className="flex justify-between py-4">
       <div className="basis-[30%] mr-8 border border-custom-grey-light-1">
         <h1
           className="text-[2rem] font-semibold text-custom-white px-6 py-4 bg-custom-red

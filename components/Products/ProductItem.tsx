@@ -21,7 +21,7 @@ const ProductItem = ({ productName, price, imageUrl }: ProductItemProps) => {
   };
 
   return (
-    <li className="relative mb-8 mt-4 list-none h-full w-[85%] overflow-hidden cursor-pointer">
+    <li className="relative mb-8 mt-4 list-none h-full w-[95%] overflow-hidden cursor-pointer">
       <div className="bg-custom-white-1 p-8 w-[100%] h-[18rem]">
         <figure className="relative  w-[100%] h-[100%] overflow-hidden">
           <Image

@@ -48,8 +48,8 @@ const TopNavigation = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="flex justify-between items-center py-6 px-12 bg-custom-red-light-4 border-b border-custom-grey-light-2">
-      <Link href="/" className=" w-fit px-6">
+    <nav className="flex justify-between items-center py-6 px-[8rem] bg-custom-red-light-4 border-b border-custom-grey-light-2">
+      <Link href="/" className="">
         <figure className="relative h-[6rem] w-[10rem]">
           <Image
             className="absolute "

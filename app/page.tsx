@@ -4,6 +4,8 @@ import { productList } from "@/components/Products/productsList";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SingleImageRenderer from "@/components/SingleImageRenderer/SingleImageRenderer";
+import Categories from "@/components/Categories/Categories";
 
 export default function Home() {
   return (
@@ -13,6 +15,21 @@ export default function Home() {
         productArray={productList}
         productType="FLASH SALES"
         title="Today's"
+        slidePerRow={1}
+      />
+      <SingleImageRenderer imgUrl="/images/solar-solution.webp" />
+      <ProductList
+        productArray={productList}
+        productType="Best Selling Products"
+        title="This month"
+        slidePerRow={1}
+      />
+      <Categories title="Categories" categoriesType="Browse By Category" />
+      <ProductList
+        productArray={productList}
+        productType="Explore Our Products"
+        title="Our Products"
+        slidePerRow={2}
       />
     </>
   );

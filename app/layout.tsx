@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ScamAlert message="Kara.com.ng will never ask you to pay or send money to any other bank Name Besides Royal Coast Technologies Limited"></ScamAlert>
         <TopNavigation></TopNavigation>
-        <main>{children}</main>
+        <main className="px-[8rem]">{children}</main>
       </body>
     </html>
   );
