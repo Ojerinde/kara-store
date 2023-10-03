@@ -52,7 +52,7 @@ const Footer = () => {
               placeholder="Enter your email"
               className="outline-none text-[1.6rem] py-3 px-4 rounded-lg bg-custom-black-1 border-custom-white-1"
             />
-            <FaTruckArrowRight className=" text-[2.5rem]" />
+            <FaTruckArrowRight className=" text-[2.5rem] cursor-pointer" />
           </form>
 
           <div className="mt-[3rem] flex items-end">

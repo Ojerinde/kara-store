@@ -4,7 +4,7 @@ import SignUpForm from "./signUpForm";
 export default function SignUp() {
   return (
     <section className="flex justify-between items-center px-[8rem] py-[7rem] bg-custom-white-1">
-      <div className="basis-[45%]">
+      <div className="basis-[50%]">
         <figure className="w-[100%] h-[100vh] relative">
           <Image
             src={"/images/formImage.png"}

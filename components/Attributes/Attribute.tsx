@@ -9,7 +9,7 @@ interface AttributeProps {
 const Attribute: React.FC<AttributeProps> = ({ icon, title, text }) => {
   return (
     <li className="flex flex-col items-center">
-      <div className="flex justify-center items-center rounded-[50%] bg-custom-grey w-[9rem] h-[9rem]">
+      <div className="flex justify-center items-center rounded-[50%] bg-custom-red-light-3 w-[9rem] h-[9rem]">
         <div className="flex justify-center items-center rounded-[50%] bg-custom-black-1 w-[7rem] h-[7rem]">
           {icon}
         </div>
