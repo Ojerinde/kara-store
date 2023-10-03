@@ -9,7 +9,7 @@ export const productList = [
     productName: "Product 2",
     price: 1500,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 3",
@@ -21,7 +21,7 @@ export const productList = [
     productName: "Product 4",
     price: 1200,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 5",
@@ -33,7 +33,7 @@ export const productList = [
     productName: "Product 6",
     price: 750,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 7",
@@ -45,7 +45,7 @@ export const productList = [
     productName: "Product 8",
     price: 1350,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 9",
@@ -57,7 +57,7 @@ export const productList = [
     productName: "Product 10",
     price: 2000,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 11",
@@ -69,7 +69,7 @@ export const productList = [
     productName: "Product 12",
     price: 1700,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 13",
@@ -81,7 +81,7 @@ export const productList = [
     productName: "Product 14",
     price: 1300,
     imageUrl:
-      "https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/08/Galaxy-S24-Ultra.jpg?ssl=1&quality=80&w=800",
+      "https://www.91-cdn.com/hub/wp-content/uploads/2023/07/Samsung-s24.jpg",
   },
   {
     productName: "Product 15",
