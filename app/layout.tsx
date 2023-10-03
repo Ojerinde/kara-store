@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 
 import ScamAlert from "@/components/ScamAlert/ScamAlert";
 import TopNavigation from "@/components/TopNavigation/TopNavigation";
+import Footer from "@/components/Footer/Footer";
+import Attributes from "@/components/Attributes/Attributes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +26,8 @@ export default function RootLayout({
         <ScamAlert message="Kara.com.ng will never ask you to pay or send money to any other bank Name Besides Royal Coast Technologies Limited"></ScamAlert>
         <TopNavigation></TopNavigation>
         <main className="px-[8rem]">{children}</main>
-        <section>Contact details comes here</section>
-        <footer>Footer comes here</footer>
+        <Attributes />
+        <Footer />
       </body>
     </html>
   );

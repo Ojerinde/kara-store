@@ -39,7 +39,7 @@ const ProductItem = ({ productName, price, imageUrl }: ProductItemProps) => {
       <div className=" text-left  mt-[1rem]">
         <h2 className="text-[1.6rem] font-normal">This is {productName}</h2>
         <h3 className="text-[1.5rem] text-custom-red font-semibold">
-          #{price}
+          &#8358;{price}
         </h3>
       </div>
     </li>

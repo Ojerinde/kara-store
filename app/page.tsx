@@ -4,7 +4,8 @@ import { productList } from "@/components/Products/productsList";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SingleImageRenderer from "@/components/SingleImageRenderer/SingleImageRenderer";
+import SingleImageRenderer from "@/components/ImageRenderer/SingleImageRenderer";
+import DoubleImageRenderer from "@/components/ImageRenderer/DoubleImageRenderer";
 import Categories from "@/components/Categories/Categories";
 
 export default function Home() {
@@ -30,6 +31,10 @@ export default function Home() {
         productType="Explore Our Products"
         title="Our Products"
         slidePerRow={2}
+      />
+      <DoubleImageRenderer
+        imgUrl1="/images/gaming.webp"
+        imgUrl2="/images/MFLLaptops.webp"
       />
     </>
   );
