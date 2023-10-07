@@ -9,21 +9,29 @@
   background-size: cover;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
-.swiper-pagination-bullet .swiper-pagination-bullet-active {
-  border-radius: 50% !important;
-}
-
 .swiper-pagination-bullet {
+  margin-top: 10rem !important;
   width: 1.2rem !important;
   height: 1.2rem !important;
   background-color: rgb(255, 251, 251) !important;
 }
 .swiper-pagination-bullet-active {
-  width: 1.4rem !important;
-  height: 1.4rem !important;
+  width: 1.6rem !important;
+  height: 1.6rem !important;
   background-color: rgb(158, 19, 19) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 2rem;
+  color: rgb(158, 19, 19) !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: white !important;
 }

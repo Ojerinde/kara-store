@@ -20,14 +20,16 @@ const ProductDetailImages: React.FC<ProductDetailImagesProp> = ({ images }) => {
         effect={"cube"}
         grabCursor={true}
         loop={true}
-        // navigation={true}
+        navigation={true}
         cubeEffect={{
           shadow: true,
           slideShadows: true,
           shadowOffset: 20,
           shadowScale: 0.94,
         }}
-        pagination={true}
+        pagination={{
+          clickable: true,
+        }}
         modules={[EffectCube, Pagination, Navigation]}
         className="mySwiper"
       >
